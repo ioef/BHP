@@ -1,4 +1,6 @@
-# Black Hat Python Book Examples with a little bit of personal interventions :)
+# Black Hat Python Book Examples 
+
+Black Hat Python Book Examples  with a little bit of personal interventions :)
 
 /**
  *     \            _    _            _    
