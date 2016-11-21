@@ -9,7 +9,10 @@ from optparse import OptionParser
 
 def connect(host,port, verb=False):
 	 # create a socket object for IPv4 and TCP STREAM
+<<<<<<< HEAD
 
+=======
+>>>>>>> d832288406052510004c4e193af64dab8611942d
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
  
  	#connect the client
@@ -30,8 +33,11 @@ def connect(host,port, verb=False):
 		for line in range(0,6):
 			print response[line]
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d832288406052510004c4e193af64dab8611942d
 def main(): 
 
 	target_host = "www.google.com"
@@ -46,11 +52,16 @@ def main():
 	if len(arguments) < 1 or len(arguments) > 2:
 		parser.print_help()
 		exit(1)
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> d832288406052510004c4e193af64dab8611942d
 	target_host = arguments[0]
 	
 	if len(arguments) == 2:
 		target_port = int(arguments[1])
+<<<<<<< HEAD
 
 	if options.verbose: verbose = True
 
@@ -59,3 +70,12 @@ def main():
 
 if __name__ == '__main__':
 	main()   
+=======
+		
+	if options.verbose: verbose = True
+	
+	connect(target_host, target_port, verbose)
+
+if __name__ == '__main__':
+	main()  
+>>>>>>> d832288406052510004c4e193af64dab8611942d
