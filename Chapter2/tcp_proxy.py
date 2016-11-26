@@ -132,7 +132,7 @@ def response_handler(buffer):
 def main():
 	
 	#no fancy command-line parsing here
-	if len(sys.argv[1:]) ! = 5:
+	if len(sys.argv[1:]) != 5:
 		print "Usage: ./tcp_proxy.py 127.0.0.1 9000 10.10.10.1 9000 True"
 		sys.exit(0)
 
