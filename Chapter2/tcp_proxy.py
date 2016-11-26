@@ -24,7 +24,7 @@ def server_loop(local_host, local_port, remote_host, remote_port, receive_first)
 	print "[*] Listening on %s:%d" % (local_host, local_port)
 
 	#create a backlog of 5 incoming connections
-	server_listen(5)
+	server.listen(5)
 
 	#wait for incoming connections and accept them
 	while True:
