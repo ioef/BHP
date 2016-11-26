@@ -119,6 +119,31 @@ def hexdump(src, length=16):
 
 	print b'\n'.join(result)
 
+def receive_from(connection):
+	buffer = ""
+
+	#we set a 2 second timeout; depending on your target
+	#this may need to be adjusted 
+	connection.timeout(2)
+
+	try:
+		#keep reading into the buffer until
+		#there's no more data
+
+		#or we time-out
+
+		while True:
+			data = connection.recv(4096)
+
+			if not data:
+				break
+
+			buffer +=data
+	except:
+	pass
+
+	return buffer
+
 
 #modify any requests destined for the remote host
 def request_handler(buffer):
