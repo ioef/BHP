@@ -124,7 +124,7 @@ def receive_from(connection):
 
 	#we set a 2 second timeout; depending on your target
 	#this may need to be adjusted 
-	connection.timeout(2)
+	connection.timeout(4)
 
 	try:
 		#keep reading into the buffer until
