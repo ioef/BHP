@@ -47,6 +47,8 @@ def proxy_handler(client_socket, remote_host, remote_port, receive_first):
 	remote_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	
 	remote_socket.connect((remote_host,remote_port))
+
+	remote_buffer =""
 	
 	# receive data from the remote end if neccessary
 	if receive_first:
@@ -63,7 +65,7 @@ def proxy_handler(client_socket, remote_host, remote_port, receive_first):
 	while True:
 		
 		#read from local host
-		local_buffer = receive(client_socket)
+		local_buffer = receive_from(client_socket)
 
 		if len(local_buffer):
 
@@ -124,7 +126,7 @@ def receive_from(connection):
 
 	#we set a 2 second timeout; depending on your target
 	#this may need to be adjusted 
-	connection.timeout(4)
+	connection.settimeout(4)
 
 	try:
 		#keep reading into the buffer until
