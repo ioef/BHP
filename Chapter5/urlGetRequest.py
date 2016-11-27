@@ -12,7 +12,7 @@ headers = {}
 
 headers['User-Agent'] = "Googlebot"
 
-#perform a GET Request towards the URL
+#create a Request Object where we pass the url and the headers dictionary
 request = urllib2.Request(url, headers=headers)
 
 #open the request and print it
