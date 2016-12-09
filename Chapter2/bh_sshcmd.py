@@ -22,7 +22,7 @@ def ssh_command(ip, port, user, passwd, command):
 def main():
 	
 	if len(sys.argv[1:]) != 3:
-		print "Usage: ./ssh_client.py server port username"
+		print "Usage: ./bh_sshcmd.py server port username"
 		sys.exit(0)
 
 	server   = sys.argv[1]
